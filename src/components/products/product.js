@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from "react";
 import styles from "./products.module.css";
+import { useSelector, useDispatch} from 'react-redux'
+import allActions from "../../redux/actions";
 
 const Product = (props) => {
-  const [products, setProducts] = useState([]);
+
+
+  const dispatch = useDispatch();
+  const productItems = useSelector(state => state.products.productItems)
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products/category/" + props.category)
-      .then((res) => res.json())
-      .then((json) => {
-        setProducts(json);
-        // console.log(json);
-      });
+      dispatch(allActions.FetchProductAction.fetchProducts())
   }, []);
 
   return (
     <div className="row product-row">
-      {console.log(products)}
-      {products &&
-        products.map((product, index) => {
+    {productItems &&
+        productItems.map((product, index) => {
           return (
             <div className="col-md-4 col-6 product-div" key={index}>
               <div className={`card py-4 ${styles.product}`}>
@@ -39,7 +38,7 @@ const Product = (props) => {
               </div>
             </div>
           );
-        })}
+        })} 
     </div>
   );
 };
