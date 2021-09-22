@@ -1,0 +1,33 @@
+.product {
+  padding: 20px;
+  margin-bottom: 25px;
+}
+.productImage {
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+}
+.productPrize {
+  color: #69727b;
+  font-weight: 600;
+  font-size: 14px;
+}
+.cardTitle {
+  font-size: 1.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 45px;
+}
+.cardImgTop {
+  max-width: 200px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+.cardText {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
