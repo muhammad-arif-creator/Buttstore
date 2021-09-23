@@ -1,19 +1,17 @@
-
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "./pages/home";
 import DetailPage from "./components/detail_page/detail_page";
 import Login from "./components/login/Login";
 import { withRouter } from "react-router-dom";
+import Cart from "./components/cart/Cart";
 import Nav from './components/Navbar/Nav';
-import Cart from './components/cart/Cart'
 import Footer from "./components/footer/Footer";
 import Banner from "./components/Banner/Banner";
 
-
 function App(props) {
-  if (window.location.pathname !== '/' && !localStorage.getItem('isLogin')) {
-    props.history.push('/')
+  if (window.location.pathname !== "/" && !localStorage.getItem("isLogin")) {
+    props.history.push("/");
   }
   return (
     <div className="App container">
@@ -29,7 +27,7 @@ function App(props) {
         <Footer />
       </Router>
     </div>
-  )
+  );
 }
 
-export default withRouter(App)
+export default withRouter(App);
