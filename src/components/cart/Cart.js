@@ -1,6 +1,15 @@
 import React from 'react'
-import styles from '../checkOut/checkOut.module.css'
-const CheckOut = () => {
+import styles from '../cart/cart.module.css'
+import { useState } from 'react'
+const Cart = () => {
+  const [count, setCount] = useState(0)
+  const incCount = () => {
+    setCount(count + 1)
+  }
+  const decCount = () => {
+    setCount(count - 1)
+  }
+  console.log(count)
   return (
     <div className={styles.cart}>
       <div className={styles.cartHeader}>
@@ -32,7 +41,12 @@ const CheckOut = () => {
                 <span>Rs.167,416.42 PKR</span>
               </td>
               <td className={styles.quantity}>
-                <input type="number"></input>
+                <div className={styles.itemsCount}>
+                  <button onClick={decCount}>-</button>
+                  {/* <input type="text"></input> */}
+                  <span>{count}</span>
+                  <button onClick={incCount}>+</button>
+                </div>
               </td>
               <td className={styles.total}>
                 <span>Rs.167,416.42 PKR</span>
@@ -58,4 +72,4 @@ const CheckOut = () => {
   )
 }
 
-export default CheckOut
+export default Cart
