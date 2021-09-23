@@ -1,7 +1,9 @@
-import FetchProductAction from "./fetch.product.action"
+import FetchProductAction from "./fetch.product.action";
+import FetchCategoriesAction from "./fetch.categories.action";
 
 const allActions = {
-    FetchProductAction
-}
+  FetchProductAction,
+  FetchCategoriesAction,
+};
 
 export default allActions;
