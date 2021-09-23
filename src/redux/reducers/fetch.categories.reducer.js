@@ -1,5 +1,6 @@
 const initialState = {
   categoriesItems: [],
+  error: null
 };
 
 const Categories = (state = initialState, action) => {
