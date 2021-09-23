@@ -15,30 +15,23 @@ const Categories = () => {
     dispatch(allActions.FetchCategoriesAction.fetchCategories());
   }, [dispatch]);
 
-  let categories=null;
-  if(categoriesItems.length===0)
-  { console.log("in spinner");
-    categories=(<Spinner ></Spinner>);
+  let categories = null;
+  if (categoriesItems.length === 0) {
+    console.log("in spinner");
+    categories = <Spinner></Spinner>;
   }
 
-  if(categoriesItems.length>=1)
-  {
-    categories=(
-      categoriesItems.map((category, index) => {
-        return (
-          <section className={styles.categorySection} key={index}>
-            <h1 className="text-uppercase ">{category}</h1>
-            <Product category={category} />
-          </section>
-        );
-      })
-    )
+  if (categoriesItems.length >= 1) {
+    categories = categoriesItems.map((category, index) => {
+      return (
+        <section className={`container ${styles.categorySection}`} key={index}>
+          <h1 className="text-uppercase ">{category}</h1>
+          <Product category={category} />
+        </section>
+      );
+    });
   }
-  return (
-    <div className={styles.categoriesWrapper}>
-      {categories}
-    </div>
-  );
+  return <div className={styles.categoriesWrapper}>{categories}</div>;
 };
 
 export default Categories;
