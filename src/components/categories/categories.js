@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from "react";
 import Product from "../products/product";
 import styles from "./categories.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import allActions from "../../redux/actions";
 
 const Categories = () => {
-  const [Categories, setCategories] = useState([]);
+  const dispatch = useDispatch();
+  const categoriesItems = useSelector(
+    (state) => state.Categories.categoriesItems
+  );
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products/categories")
-      .then((res) => res.json())
-      .then((json) => setCategories(json));
+    dispatch(allActions.FetchProductAction.fetchProducts());
+    dispatch(allActions.FetchCategoriesAction.fetchCategories());
   }, []);
   return (
     <div className={styles.categoriesWrapper}>
-      {Categories.map((category, index) => {
+      {categoriesItems.map((category, index) => {
         return (
           <section className={styles.categorySection} key={index}>
             <h1 className="text-uppercase ">{category}</h1>

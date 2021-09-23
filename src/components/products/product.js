@@ -1,20 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styles from "./products.module.css";
-import { useSelector, useDispatch} from 'react-redux'
+import { useSelector, useDispatch } from "react-redux";
 import allActions from "../../redux/actions";
 
 const Product = (props) => {
-
-
   const dispatch = useDispatch();
-  const productItems = useSelector(state => state.products.productItems)
-  useEffect(() => {
-      dispatch(allActions.FetchProductAction.fetchProducts())
-  }, []);
+  const productItems = useSelector((state) =>
+    state.Products.productItems.filter((p) => p.category === props.category)
+  );
 
   return (
     <div className="row product-row">
-    {productItems &&
+      {productItems &&
         productItems.map((product, index) => {
           return (
             <div className="col-md-4 col-6 product-div" key={index}>
@@ -38,7 +35,7 @@ const Product = (props) => {
               </div>
             </div>
           );
-        })} 
+        })}
     </div>
   );
 };
