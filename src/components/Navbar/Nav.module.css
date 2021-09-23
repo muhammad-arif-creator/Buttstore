@@ -1,0 +1,17 @@
+.Header{
+    position: relative;
+    margin-bottom: 65px;
+    padding-top: 65px;
+}
+
+.logo{
+    position: absolute;
+    top: -30px;
+    max-width: 95px;
+}
+.Navbar{
+    width: 32%;
+}
+ li{
+    padding: 0 20px;
+}
