@@ -9,6 +9,13 @@ function App(props) {
   if (window.location.pathname !== "/" && !localStorage.getItem("isLogin")) {
     props.history.push("/");
   }
+  if (
+    window.location.pathname === "/home" ||
+    window.location.pathname === "/detail-page"
+  ) {
+    props.history.push("/home");
+    localStorage.clear();
+  }
   return (
     <div className="App container">
       <Router>
