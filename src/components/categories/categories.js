@@ -25,7 +25,9 @@ const Categories = () => {
     categories = categoriesItems.map((category, index) => {
       return (
         <section className={`container ${styles.categorySection}`} key={index}>
-          <h1 className="text-uppercase ">{category}</h1>
+          <h3 className={`text-uppercase ${styles.categoryTitle}`}>
+            {category}
+          </h3>
           <Product category={category} />
         </section>
       );

@@ -31,7 +31,7 @@ const Product = (props) => {
                 />
               </div>
               <div className={styles.viewDetail}>
-                <Link to="">vieW detail</Link>
+                <Link to="">View Detail</Link>
               </div>
               <div className="card-body text-center pb-0 px-0">
                 <h6 className={`text-uppercase mb-1 ${styles.cardTitle}`}>
