@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./products.module.css";
 import { useSelector } from "react-redux";
 import Spinner from "../Spinner/Spinner";
@@ -21,24 +22,26 @@ const Product = (props) => {
         productItems.map((product, index) => {
           return (
             <div className="col-md-4 col-6 product-div" key={index}>
-              <div className={`card py-4 ${styles.product}`}>
-                <div className={styles.productImage}>
-                  <img
-                    src={product.image}
-                    className={`img-fluid ${styles.cardImgTop}`}
-                    alt={product.image}
-                  />
+              <Link to={{pathname:`/detail-page/${product.id}`}}>
+                <div className={`card py-4 ${styles.product}`}>
+                  <div className={styles.productImage}>
+                    <img
+                     src={product.image}
+                      className={`img-fluid ${styles.cardImgTop}`}
+                      alt={product.image}
+                    />
+                  </div>
+                  <div className="card-body text-center pb-0">
+                    <h6 className={`text-uppercase mb-3 ${styles.cardTitle}`}>
+                      {product.title}
+                    </h6>
+                    <p className={`card-text mb-1 ${styles.cardText}`}>
+                      {product.description}
+                    </p>
+                    <span className={styles.productPrize}> ${product.price}</span>
+                  </div>
                 </div>
-                <div className="card-body text-center pb-0">
-                  <h6 className={`text-uppercase mb-3 ${styles.cardTitle}`}>
-                    {product.title}
-                  </h6>
-                  <p className={`card-text mb-1 ${styles.cardText}`}>
-                    {product.description}
-                  </p>
-                  <span className={styles.productPrize}> {product.price}</span>
-                </div>
-              </div>
+              </Link>
             </div>
           );
         })
