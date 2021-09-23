@@ -19,7 +19,7 @@ function App(props) {
         <Nav />
         <Switch>
           <Route exact path="/home" component={HomePage}></Route>
-          <Route exact path="/detail-page" component={DetailPage}></Route>
+          <Route exact path="/detail-page/:id" component={DetailPage}></Route>
           <Route exact path="/cart" component={Cart}></Route>
           <Route exact path="/" component={Login}></Route>
         </Switch>
