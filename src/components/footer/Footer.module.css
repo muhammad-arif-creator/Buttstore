@@ -1,0 +1,29 @@
+.Icons{
+    margin-left: 20px;
+}
+ul{
+    text-align: left;
+    list-style: none;
+    width: 20%;
+    margin-bottom: 0;
+}
+li{
+    list-style: none;
+    color: #000;
+    text-decoration: none;
+}
+.link{
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+}
+.Footer{
+background-color: lightgray;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.copyright{
+    text-align: center;
+    padding: 20px 0;
+}
