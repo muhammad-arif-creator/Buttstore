@@ -8,4 +8,12 @@
 
 .categoryTitle {
   color: #ff590f;
+  display: flex;
+  justify-content: space-between;
+}
+
+.categoryTitle a {
+  color: #000;
+  text-decoration: none;
+  font-size: 15px;
 }
