@@ -26,9 +26,12 @@ p {
 }
 .cartHeader a {
   color: #000;
-  border-bottom: 1px solid currentColor;
+  /* border-bottom: 1px solid currentColor; */
   padding-bottom: 1px;
   text-decoration: none;
+}
+.cart tr {
+  border-bottom: 1px solid currentColor;
 }
 .cart table {
   width: 100%;
@@ -136,4 +139,16 @@ table td a {
 }
 .productText a:nth-child(1) {
   margin-bottom: 5px;
+}
+.itemsCount {
+  display: flex;
+  justify-content: center;
+}
+.itemsCount button {
+  max-width: 35px;
+  height: 36px;
+}
+.itemsCount span {
+  border: 1px solid black;
+  padding: 6px 15px;
 }
