@@ -9,7 +9,7 @@ const DetailPage = () => {
                 <div className="col-md-6">
                     <div className={styles.Detail_page_images}>
                         <div className={styles.Detail_image}>
-                            <img src={image1}></img>
+                            <img src={image1} alt="product img"></img>
                         </div>
                         <div className={styles.Detail_image}></div>
                     </div>
