@@ -3,9 +3,13 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "./pages/home";
 import { withRouter } from "react-router-dom";
 import Cart from "./components/cart/Cart";
+<<<<<<< HEAD
+=======
 import Nav from "./components/Navbar/Nav";
 import Footer from "./components/footer/Footer";
 import Banner from "./components/Banner/Banner";
+>>>>>>> d2f562df708c92e2c5d39651e56b95ede279e3ad
+import Hoc from "./components/HOC/Hoc";
 import loginPage from "./pages/login";
 import ProductDetailPage from "./pages/productdetail";
 import ProductListingPage from "./pages/productlisting";
@@ -17,8 +21,8 @@ function App(props) {
   return (
     <div className="App">
       <Router>
-        <Nav />
-        <Switch>
+       <Hoc>
+       <Switch>
           <Route exact path="/home" component={HomePage}></Route>
           <Route
             path="/products/:category"
@@ -32,7 +36,7 @@ function App(props) {
           <Route exact path="/cart" component={Cart}></Route>
           <Route exact path="/" component={loginPage}></Route>
         </Switch>
-        <Footer />
+       </Hoc>
       </Router>
     </div>
   );
