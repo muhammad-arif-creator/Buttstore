@@ -12,8 +12,9 @@ const Banner = () => {
       nav
       margin={3}
       dots={false}
+      animateOut="fadeOut"
     >
-      <div className={styles.item}>
+      <div className={`${styles.itemOne}`}>
         <div className="container">
           <div className="row">
             <div className="col-6">
@@ -28,19 +29,16 @@ const Banner = () => {
                   Shop now <span class="arrow_right"></span>
                 </button>
               </div>
-            </div>
-            <div className="col-6">
-              <img src="images/hero.png" alt="none" />
             </div>
           </div>
         </div>
       </div>
-      <div className={styles.item}>
+      <div className={`${styles.itemTwo} ${styles.itemOne}`}>
         <div className="container">
           <div className="row">
             <div className="col-6">
               <div className={styles.bannerText}>
-                <h6>Summer Collection</h6>
+                <h6>Winter Collection</h6>
                 <h2>Fall - Winter Collections 2030</h2>
                 <p>
                   A specialist label creating luxury essentials. Ethically
@@ -50,9 +48,6 @@ const Banner = () => {
                   Shop now <span class="arrow_right"></span>
                 </button>
               </div>
-            </div>
-            <div className="col-6">
-              <img src="images/hero.png" alt="none" />
             </div>
           </div>
         </div>
