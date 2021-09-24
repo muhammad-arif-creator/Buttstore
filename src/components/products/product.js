@@ -1,15 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./products.module.css";
 import { useSelector } from "react-redux";
 import Spinner from "../Spinner/Spinner";
+import allActions from "../../redux/actions";
 
 const Product = (props) => {
   const productItems = useSelector((state) =>
     state.Products.productItems.filter((p) => p.category === props.category)
   );
-
-  console.log(productItems);
 
   let prod = null;
   if (productItems.length === 0) {
@@ -31,7 +30,7 @@ const Product = (props) => {
                 />
               </div>
               <div className={styles.viewDetail}>
-                <Link to={{ pathname: `/detail-page/${product.id}` }}>
+                <Link to={{ pathname: `/product-detail/${product.id}` }}>
                   View Detail
                 </Link>
               </div>
