@@ -7,14 +7,13 @@ import allActions from "../../redux/actions";
 
 const ProductListing = () => {
   let params = useParams();
-  console.log(params);
   let dispatch = useDispatch();
   useEffect(() => {
-    dispatch(allActions.FetchProductAction.fetchProducts(params.category));
+    dispatch(allActions.FetchProductAction.fetchProducts());
   }, [dispatch]);
 
   return (
-    <div className={`container-fluid ${styles.ProductListing}`}>
+    <div className={`container ${styles.ProductListing}`}>
       <Product category={params.category} />
     </div>
   );

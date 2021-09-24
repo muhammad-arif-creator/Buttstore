@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/home";
 import { withRouter } from "react-router-dom";
 import Cart from "./components/cart/Cart";
@@ -15,22 +15,22 @@ function App(props) {
   return (
     <div className="App">
       <Router>
-       <Hoc>
-       <Switch>
-          <Route exact path="/home" component={HomePage}></Route>
-          <Route
-            path="/products/:category"
-            component={ProductListingPage}
-          ></Route>
-          <Route
-            exact
-            path="/product-detail/:id"
-            component={ProductDetailPage}
-          ></Route>
-          <Route exact path="/cart" component={Cart}></Route>
-          <Route exact path="/" component={loginPage}></Route>
-        </Switch>
-       </Hoc>
+        <Hoc>
+          <Switch>
+            <Route exact path="/home" component={HomePage}></Route>
+            <Route
+              path="/products/:category"
+              component={ProductListingPage}
+            ></Route>
+            <Route
+              exact
+              path="/product-detail/:id"
+              component={ProductDetailPage}
+            ></Route>
+            <Route exact path="/cart" component={Cart}></Route>
+            <Route exact path="/" component={loginPage}></Route>
+          </Switch>
+        </Hoc>
       </Router>
     </div>
   );
