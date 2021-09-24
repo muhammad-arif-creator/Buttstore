@@ -6,6 +6,7 @@ import Cart from "./components/cart/Cart";
 import Nav from "./components/Navbar/Nav";
 import Footer from "./components/footer/Footer";
 import Banner from "./components/Banner/Banner";
+import Hoc from "./components/HOC/Hoc";
 import loginPage from "./pages/login";
 import ProductDetailPage from "./pages/productdetail";
 import ProductListingPage from "./pages/productlisting";
@@ -17,8 +18,8 @@ function App(props) {
   return (
     <div className="App">
       <Router>
-        <Nav />
-        <Switch>
+       <Hoc>
+       <Switch>
           <Route exact path="/home" component={HomePage}></Route>
           <Route
             path="/products/:category"
@@ -32,7 +33,7 @@ function App(props) {
           <Route exact path="/cart" component={Cart}></Route>
           <Route exact path="/" component={loginPage}></Route>
         </Switch>
-        <Footer />
+       </Hoc>
       </Router>
     </div>
   );
