@@ -18,7 +18,7 @@ const Product = (props) => {
   if (productItems.length >= 1) {
     prod =
       productItems &&
-      productItems.slice(0, 4).map((product, index) => {
+      productItems.map((product, index) => {
         return (
           <div className="col-md-3 col-6 product-div" key={index}>
             <div className={`card py-4 ${styles.product}`}>

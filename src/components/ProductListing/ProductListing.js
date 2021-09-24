@@ -14,7 +14,7 @@ const ProductListing = () => {
   }, [dispatch]);
 
   return (
-    <div className={`container-fluid ${styles.ProductListing}`}>
+    <div className={`container ${styles.ProductListing}`}>
       <Product category={params.category} />
     </div>
   );
