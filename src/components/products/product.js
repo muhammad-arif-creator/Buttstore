@@ -1,13 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./products.module.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Spinner from "../Spinner/Spinner";
 
 const Product = (props) => {
+  const dispatch =useDispatch();
   const productItems = useSelector((state) =>
     state.Products.productItems.filter((p) => p.category === props.category)
   );
+
+  const handleAddToCart=(product)=>{
+    let payload={product:product, qty:1};
+    console.log(payload);
+    dispatch(allActions.CartAction.addToCart(payload));
+  }
 
   console.log(props);
   let prod = null;
@@ -41,7 +48,7 @@ const Product = (props) => {
                 <p className={styles.cardText}> {product.description}</p>
                 <div className={styles.cardBottom}>
                   <span className={styles.productPrize}> ${product.price}</span>
-                  <button className={`btn ${styles.btnCart}`}>
+                  <button className={`btn ${styles.btnCart}`} onClick={()=>{handleAddToCart(product)}} >
                     ADD TO CART
                   </button>
                 </div>
