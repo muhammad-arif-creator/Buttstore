@@ -67,6 +67,8 @@
 .loginCard button:hover {
   transform: translateY(-3px);
   box-shadow: 0 2px 6px -1px rgba(182, 157, 230, 0.65);
+  background-color: #000;
+  border-radius: 24px;
 }
 .loginCard button:hover:active {
   transform: scale(0.99);
