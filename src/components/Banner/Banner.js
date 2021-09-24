@@ -1,63 +1,63 @@
 import React from "react";
-
+import styles from "./Banner.module.css";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 const Banner = () => {
   return (
-    <div
-      id="carouselExampleIndicators"
-      className="carousel slide"
-      data-ride="carousel"
+    <OwlCarousel
+      items={1}
+      className="owl-theme"
+      loop
+      nav
+      margin={3}
+      dots={false}
     >
-      <ol className="carousel-indicators">
-        <li
-          data-target="#carouselExampleIndicators"
-          data-slide-to={0}
-          className="active"
-        />
-        <li data-target="#carouselExampleIndicators" data-slide-to={1} />
-        <li data-target="#carouselExampleIndicators" data-slide-to={2} />
-      </ol>
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img
-            className="d-block w-100"
-            src="images/hero.png"
-            alt="First slide"
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            className="d-block w-100"
-            src="images/hero.png"
-            alt="First slide"
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            className="d-block w-100"
-            src="images/hero.png"
-            alt="First slide"
-          />
+      <div className={styles.item}>
+        <div className="container">
+          <div className="row">
+            <div className="col-6">
+              <div className={styles.bannerText}>
+                <h6>Summer Collection</h6>
+                <h2>Fall - Winter Collections 2030</h2>
+                <p>
+                  A specialist label creating luxury essentials. Ethically
+                  crafted with an unwavering commitment to exceptional quality.
+                </p>
+                <button href="#" class="primary-btn">
+                  Shop now <span class="arrow_right"></span>
+                </button>
+              </div>
+            </div>
+            <div className="col-6">
+              <img src="images/hero.png" alt="none" />
+            </div>
+          </div>
         </div>
       </div>
-      <a
-        className="carousel-control-prev"
-        href="#carouselExampleIndicators"
-        role="button"
-        data-slide="prev"
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true" />
-        <span className="sr-only">Previous</span>
-      </a>
-      <a
-        className="carousel-control-next"
-        href="#carouselExampleIndicators"
-        role="button"
-        data-slide="next"
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true" />
-        <span className="sr-only">Next</span>
-      </a>
-    </div>
+      <div className={styles.item}>
+        <div className="container">
+          <div className="row">
+            <div className="col-6">
+              <div className={styles.bannerText}>
+                <h6>Summer Collection</h6>
+                <h2>Fall - Winter Collections 2030</h2>
+                <p>
+                  A specialist label creating luxury essentials. Ethically
+                  crafted with an unwavering commitment to exceptional quality.
+                </p>
+                <button href="#" class="primary-btn">
+                  Shop now <span class="arrow_right"></span>
+                </button>
+              </div>
+            </div>
+            <div className="col-6">
+              <img src="images/hero.png" alt="none" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </OwlCarousel>
   );
 };
 
