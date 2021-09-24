@@ -138,6 +138,10 @@ table td a {
   width: 100%;
   padding-right: 30px;
 }
+.productText span{
+  font-size: 1.125rem;
+ 
+}
 .productText a:nth-child(1) {
   margin-bottom: 5px;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./logo.png";
 import styles from "./Nav.module.css";
+import { Link } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
 
 const Nav = () => {
@@ -29,12 +30,12 @@ const Nav = () => {
               </li>
 
               <li className="nav-item">
-                <a className="nav-link">
+                <Link className="nav-link" to={{ pathname: `/cart` }}>
                   <i
                     className="fa fa-shopping-cart"
                     style={{ fontSize: 24 }}
                   ></i>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
