@@ -18,7 +18,7 @@ li {
   padding: 10px;
 }
 .Footer {
-  background-color: #000;
+  background-color: #292929;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -27,6 +27,6 @@ li {
   text-align: center;
   padding: 20px 0;
 }
-.copyright span{
-    color: #fff;
+.copyright span {
+  color: #fff;
 }
