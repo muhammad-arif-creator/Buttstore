@@ -29,7 +29,9 @@ const Categories = () => {
           <h3 className={`text-uppercase ${styles.categoryTitle}`}>
             {category}
             <span>
-              <Link>view all products</Link>
+              <Link to={{ pathname: `products/${category}` }}>
+                view all products <i class="fa fa-arrow-right"></i>
+              </Link>
             </span>
           </h3>
           <Product category={category} />

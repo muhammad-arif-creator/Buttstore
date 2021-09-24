@@ -1,14 +1,18 @@
-const fetchProducts = () => async (dispatch) => {
-  dispatch({type: "FETCH_DATA"});
+const fetchProducts = (category) => async (dispatch) => {
+  dispatch({ type: "FETCH_DATA" });
   try {
-    const response = await fetch("https://fakestoreapi.com/products");
+    let url = "https://fakestoreapi.com/products";
+    if (category) {
+      url = `${url}/category/${category}`;
+    }
+    const response = await fetch(url);
     const productData = await response.json();
-    dispatch({type: "FETCH_POSTS_SUCCESS",payload: productData});
+    dispatch({ type: "FETCH_POSTS_SUCCESS", payload: productData });
   } catch (error) {
-    dispatch({type: "FETCH_POSTS_FAILURE",payload: error})}
+    dispatch({ type: "FETCH_POSTS_FAILURE", payload: error });
+  }
 };
 
-
 export default {
-  fetchProducts
+  fetchProducts,
 };
