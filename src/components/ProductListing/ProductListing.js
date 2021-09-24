@@ -7,10 +7,9 @@ import allActions from "../../redux/actions";
 
 const ProductListing = () => {
   let params = useParams();
-  console.log(params);
   let dispatch = useDispatch();
   useEffect(() => {
-    dispatch(allActions.FetchProductAction.fetchProducts(params.category));
+    dispatch(allActions.FetchProductAction.fetchProducts());
   }, [dispatch]);
 
   return (
