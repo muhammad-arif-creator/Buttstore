@@ -41,6 +41,7 @@
   top: 50%;
   width: 98%;
   left: 20px;
+  z-index: 9999;
 }
 .owl-theme .owl-nav button.owl-next {
   position: absolute;
@@ -59,6 +60,7 @@
 .owl-theme .owl-nav span {
   font-size: 2.9375em;
   margin-bottom: 10px;
+  color: #fff;
 }
 .owl-theme .owl-nav [class*="owl-"]:hover {
   background: transparent !important;
