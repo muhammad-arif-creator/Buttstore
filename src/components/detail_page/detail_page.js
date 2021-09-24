@@ -35,6 +35,26 @@ const DetailPage = () => {
         </div>
         <div className="col-md-3">
             <h2>{productDetails.title}</h2>
+<<<<<<< HEAD
+            <h4>${productDetails.price}</h4>
+            <h5>
+              Rating:{productDetails.rating.rate} <span></span>
+            </h5>
+            <span>Tax included for Pakistan</span>
+            <form>
+              <div className="form-group">
+                <label>Quantity</label>
+                <input className="form-control" type="number" />
+              </div>
+              <div className={styles.buttons}>
+                <button className={styles.FirstBtn}>ADD TO CART</button>
+                <button className={styles.SecondBtn}>BUY IT NOW</button>
+              </div>
+            </form>
+            <h6>Details</h6>
+            <p className={styles.details}>{productDetails.description}</p>
+          </div>
+=======
              <h4>${productDetails.price}</h4>
              <h5>Rating:{productDetails.rating.rate} <span></span></h5>
              <span>Tax included for Pakistan</span>
@@ -59,6 +79,7 @@ const DetailPage = () => {
     return (
         <div className={styles.Detail_page}>
             {prodDetail}
+>>>>>>> d2f562df708c92e2c5d39651e56b95ede279e3ad
         </div>
     )
 }
