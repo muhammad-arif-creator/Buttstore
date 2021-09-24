@@ -8,6 +8,7 @@ import Cart from "./components/cart/Cart";
 import Nav from "./components/Navbar/Nav";
 import Footer from "./components/footer/Footer";
 import Banner from "./components/Banner/Banner";
+import Hoc from "./components/HOC/Hoc";
 
 function App(props) {
   if (window.location.pathname !== "/" && !localStorage.getItem("isLogin")) {
@@ -16,14 +17,14 @@ function App(props) {
   return (
     <div className="App">
       <Router>
-        <Nav />
-        <Switch>
+       <Hoc>
+       <Switch>
           <Route exact path="/home" component={HomePage}></Route>
           <Route exact path="/detail-page/:id" component={DetailPage}></Route>
           <Route exact path="/cart" component={Cart}></Route>
           <Route exact path="/" component={Login}></Route>
         </Switch>
-        <Footer />
+       </Hoc>
       </Router>
     </div>
   );

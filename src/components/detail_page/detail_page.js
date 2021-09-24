@@ -36,7 +36,7 @@ const DetailPage = () => {
         <div className="col-md-3">
             <h2>{productDetails.title}</h2>
              <h4>${productDetails.price}</h4>
-             <h5>Rating: <span></span></h5>
+             <h5>Rating:{productDetails.rating.rate} <span></span></h5>
              <span>Tax included for Pakistan</span>
              <form>
                 <div className="form-group">
@@ -53,6 +53,8 @@ const DetailPage = () => {
         </div>
    </div>
       )
+
+      console.log(productDetails);
   }
     return (
         <div className={styles.Detail_page}>
