@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./logo.png";
 import styles from "./Nav.module.css";
+import { Link } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
 import { useLocation } from "react-router-dom";
 
@@ -32,6 +33,16 @@ const Nav = () => {
                     </a>
                   </li>
 
+              <li className="nav-item">
+                <Link className="nav-link" to={{ pathname: `/cart` }}>
+                  <i
+                    className="fa fa-shopping-cart"
+                    style={{ fontSize: 24 }}
+                  ></i>
+                </Link>
+              </li>
+            </ul>
+
                   <li className="nav-item">
                     <a className="nav-link">
                       <i
@@ -43,6 +54,7 @@ const Nav = () => {
                 </ul>
               </div>
             </nav>
+
           </div>
         </header>
       ) : (
