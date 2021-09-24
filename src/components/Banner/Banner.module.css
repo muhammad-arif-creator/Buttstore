@@ -54,6 +54,9 @@
   max-height: 60px;
   font-size: 16px;
   text-transform: uppercase;
+  color: #fff;
+  background: transparent;
+  border-color: #fff;
 }
 .bannerText button:hover {
   color: #fff;
