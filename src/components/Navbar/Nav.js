@@ -15,7 +15,7 @@ const Nav = () => {
           class="collapse navbar-collapse justify-content-end"
           id="navbarText"
         >
-          <ul class={`navbar-nav mr-auto ${styles.Navbar}`}>
+          <ul class={`navbar-nav ml-auto ${styles.Navbar}`}>
             <li class="nav-item active">
               <a class="nav-link" href="#">
                 Home{" "}
@@ -26,11 +26,7 @@ const Nav = () => {
                 About
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Contact Us
-              </a>
-            </li>
+
             <li className="nav-item">
               <a className="nav-link">
                 <i className="fa fa-shopping-cart" style={{ fontSize: 24 }}></i>
