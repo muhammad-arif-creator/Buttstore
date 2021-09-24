@@ -18,7 +18,6 @@ const Categories = () => {
 
   let categories = null;
   if (categoriesItems.length === 0) {
-    console.log("in spinner");
     categories = <Spinner></Spinner>;
   }
 
