@@ -29,7 +29,7 @@ const DetailPage = () => {
               <div className={styles.Detail_image}>
                 <img src={productDetails.image} alt="product img"></img>
               </div>
-              <div className={styles.Detail_image}></div>
+              {/* <div className={styles.Detail_image}></div> */}
             </div>
           </div>
           <div className="col-md-5">

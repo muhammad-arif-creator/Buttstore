@@ -2,6 +2,7 @@
   /* width: 70%;
     margin: 0 auto; */
   text-align: left;
+  background: #fff;
 }
 .container {
   max-width: 80%;
@@ -10,11 +11,15 @@
 }
 .Detail_page_images {
   display: flex;
+  background: #fff;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
-.Detail_image {
+/* .Detail_image {
   max-width: 350px;
   margin-left: auto;
-}
+} */
 img {
   width: 100%;
 }
@@ -61,12 +66,15 @@ button {
   display: block;
   width: 100%;
   height: 50px;
-  border: 1px solid black;
   border-radius: 4px;
+  background: transparent;
+  border: unset;
 }
 button:hover {
-  background-color: #808080;
+  background: #ff590f;
+  color: #fff;
   transition: all ease-in-out 0.5s;
+  border: unset;
 }
 .buttons {
   display: flex;
@@ -75,6 +83,7 @@ button:hover {
 .FirstBtn {
   max-width: 30%;
   width: 100%;
+  border: 1px solid black;
 }
 
 .SecondBtn {
@@ -83,9 +92,12 @@ button:hover {
   margin-left: 30px;
   max-width: 30%;
   width: 100%;
+  /* background: transparent; */
+  color: #fff;
 }
 .SecondBtn:hover {
-  background-color: #808080;
-  color: #000;
+  background: #ff590f;
+  color: #fff;
   transition: all ease-in-out 0.5s;
+  border: unset;
 }
