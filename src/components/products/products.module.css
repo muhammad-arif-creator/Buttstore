@@ -64,6 +64,11 @@
   align-items: center;
   margin-top: 20px;
 }
+.cardBottomActive .btnCart {
+  color: #fff;
+  background: #ff590f;
+  border-color: #ff590f;
+}
 .btnCart {
   margin-left: auto;
   max-width: 120px;
@@ -72,6 +77,7 @@
   font-size: 14px;
   max-height: 40px;
 }
+
 .btnCart:hover {
   color: #fff;
   background: #ff590f;
