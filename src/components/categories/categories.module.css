@@ -5,7 +5,9 @@
   text-align: left;
   padding: 80px 0px;
 }
-
+.categorySection:last-child {
+  margin-bottom: 0px;
+}
 .categoryTitle {
   color: #ff590f;
   display: flex;

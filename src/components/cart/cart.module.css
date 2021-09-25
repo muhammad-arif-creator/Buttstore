@@ -25,9 +25,10 @@ p {
   margin-bottom: 1.7rem;
   font-size: 2.875rem;
 }
+
 .cartHeader a {
-  color: #000;
-  /* border-bottom: 1px solid currentColor; */
+  color: #ff590f;
+  border-bottom: 1px solid #ff590f;
   padding-bottom: 1px;
   text-decoration: none;
 }
@@ -86,7 +87,7 @@ p {
 .payPalBtn {
   max-width: 120px;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 0px;
   border: none;
 }
 .payPalBtn {
@@ -136,11 +137,25 @@ table td a {
   flex-direction: column;
   max-width: 75%;
   width: 100%;
+  align-items: flex-start;
+  padding-left: 30px;
   padding-right: 30px;
 }
-.productText span{
+.productText button {
+  cursor: pointer;
+  border: 1px solid red;
+  max-width: auto;
+  border-bottom: 1px solid red;
+  border-radius: 0px;
+  max-width: 83px;
+  max-height: 35px;
+  color: red;
+}
+.productText button:hover {
+  background-color: red;
+}
+.productText span {
   font-size: 1.125rem;
- 
 }
 .productText a:nth-child(1) {
   margin-bottom: 5px;
@@ -150,8 +165,11 @@ table td a {
   justify-content: center;
 }
 .itemsCount button {
-  max-width: 35px;
-  height: 36px;
+  max-width: 50px;
+  max-height: 44px;
+  border-radius: 0px;
+  background: #000;
+  color: #fff;
 }
 .itemsCount span {
   border: 1px solid black;
