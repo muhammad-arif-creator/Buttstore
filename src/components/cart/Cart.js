@@ -19,6 +19,12 @@ const Cart = () => {
     console.log(payload);
     dispatch(allActions.CartAction.increaseQuantity(payload));
   }
+
+  const handleDecrement=(index)=>{
+    let payload={index:index};
+    console.log(payload);
+    dispatch(allActions.CartAction.decreaseQuantity(payload));
+  }
   
   return (
     <div className={styles.cart}>
@@ -56,7 +62,7 @@ const Cart = () => {
                 </td>
                 <td className={styles.quantity}>
                   <div className={styles.itemsCount}>
-                    <button>-</button>
+                    <button onClick={()=>{handleDecrement(index)}}>-</button>
                     {/* <input type="text"></input> */}
                     <input type="number" value={product.quantity}></input>
                     <button onClick={()=>{handleIncrement(index)}}>+</button>

@@ -16,6 +16,15 @@ const DetailPage = () => {
       allActions.fetchProductDetailsAction.fetchProductDetails(params.id),
     )
   }, [dispatch])
+  let quantity=0;
+  const handleAddToCart=()=>{
+    let payload={product:productDetails, qty:quantity};
+    dispatch(allActions.CartAction.addToCart(payload));
+  }
+ 
+  const getQuantity=(e)=>{
+    quantity=e.target.value;
+  }
 
   let prodDetail = null
   if (Object.entries(productDetails).length === 0) {
@@ -39,16 +48,16 @@ const DetailPage = () => {
               Rating:   {productDetails.rating.rate} <span></span>
             </h5>
             <span>Tax included for Pakistan</span>
-            <form>
+            <div>
               <div className="form-group">
                 <label>Quantity</label>
-                <input className="form-control" type="number" />
+                <input className="form-control" type="number" onChange={(e)=>{getQuantity(e)}} />
               </div>
               <div className={styles.buttons}>
-                <button className={styles.FirstBtn}>ADD TO CART</button>
+                <button className={styles.FirstBtn} onClick={handleAddToCart}>ADD TO CART</button>
                 <button className={styles.SecondBtn}>BUY IT NOW</button>
               </div>
-            </form>
+            </div>
             <h6>Details</h6>
             <p className={styles.details}>{productDetails.description}</p>
           </div>

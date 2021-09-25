@@ -28,5 +28,6 @@ const decreaseQuantity=(payload)=>{
 export default {
     addToCart,
     removeFromCart,
-    increaseQuantity
+    increaseQuantity,
+    decreaseQuantity
 }
