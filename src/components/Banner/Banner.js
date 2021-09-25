@@ -17,7 +17,7 @@ const Banner = () => {
       <div className={`${styles.itemOne}`}>
         <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="col-12">
               <div className={styles.bannerText}>
                 <h6>Summer Collection</h6>
                 <h2>Fall - Winter Collections 2030</h2>
@@ -36,7 +36,7 @@ const Banner = () => {
       <div className={`${styles.itemTwo} ${styles.itemOne}`}>
         <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="col-12">
               <div className={styles.bannerText}>
                 <h6>Winter Collection</h6>
                 <h2>Fall - Winter Collections 2030</h2>

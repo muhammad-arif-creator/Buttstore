@@ -3,6 +3,12 @@ header {
   z-index: 3;
   width: 100%;
 }
+.headerChange {
+  position: static;
+  z-index: 3;
+  width: 100%;
+  background-color: #292929;
+}
 
 .logo {
   max-width: 95px;

@@ -7,14 +7,21 @@ import allActions from "../../redux/actions";
 
 const ProductListing = () => {
   let params = useParams();
-  console.log(params);
   let dispatch = useDispatch();
   useEffect(() => {
     dispatch(allActions.FetchProductAction.fetchProducts(params.category));
   }, [dispatch]);
 
   return (
-    <div className={`container-fluid ${styles.ProductListing}`}>
+    <div className={`container ${styles.ProductListing}`}>
+      <div className={`mb-3 ${styles.ProductListingTop}`}>
+        <h2 className="mb-3">{params.category} </h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s,
+        </p>
+      </div>
       <Product category={params.category} />
     </div>
   );
