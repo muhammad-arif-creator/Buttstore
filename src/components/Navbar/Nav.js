@@ -3,6 +3,7 @@ import logo from "./logo.png";
 import styles from "./Nav.module.css";
 import "font-awesome/css/font-awesome.min.css";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const location = useLocation();
@@ -22,9 +23,9 @@ const Nav = () => {
               >
                 <ul class={`navbar-nav ml-auto ${styles.Navbar}`}>
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">
+                    <Link class="nav-link" to={{pathname:'/home'}}>
                       Home{" "}
-                    </a>
+                    </Link>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">
@@ -33,12 +34,12 @@ const Nav = () => {
                   </li>
 
                   <li className="nav-item">
-                    <a className="nav-link">
+                    <Link className="nav-link" to={{pathname:'/cart'}}>
                       <i
                         className="fa fa-shopping-cart"
                         style={{ fontSize: 24 }}
                       ></i>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -59,9 +60,9 @@ const Nav = () => {
               >
                 <ul class={`navbar-nav ml-auto ${styles.Navbar}`}>
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">
+                    <Link class="nav-link" to={{pathname:'/home'}}>
                       Home{" "}
-                    </a>
+                    </Link>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">
@@ -70,12 +71,12 @@ const Nav = () => {
                   </li>
 
                   <li className="nav-item">
-                    <a className="nav-link">
+                    <Link className="nav-link" to={{pathname:'/cart'}}>
                       <i
                         className="fa fa-shopping-cart"
                         style={{ fontSize: 24 }}
                       ></i>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
