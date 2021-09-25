@@ -38,7 +38,11 @@ const Categories = () => {
       );
     });
   }
-  return <div className={styles.categoriesWrapper}>{categories}</div>;
+  return (
+    <div id="categories" className={styles.categoriesWrapper}>
+      {categories}
+    </div>
+  );
 };
 
 export default Categories;

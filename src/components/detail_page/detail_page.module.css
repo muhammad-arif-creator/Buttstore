@@ -73,6 +73,7 @@ button:hover {
 .buttons {
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
 }
 .FirstBtn {
   max-width: 30%;

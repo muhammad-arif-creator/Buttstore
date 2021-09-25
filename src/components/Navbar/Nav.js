@@ -13,9 +13,12 @@ const Nav = () => {
         <header>
           <div className={`container`}>
             <nav class="navbar navbar-expand-lg navbar-light">
-              <a class={`navbar-brand ${styles.logo}`}>
+              <Link
+                to={{ pathname: "/home" }}
+                class={`navbar-brand ${styles.logo}`}
+              >
                 <img src={logo} alt="none"></img>
-              </a>
+              </Link>
 
               <div
                 class="collapse navbar-collapse justify-content-end"
@@ -23,7 +26,7 @@ const Nav = () => {
               >
                 <ul class={`navbar-nav ml-auto ${styles.Navbar}`}>
                   <li class="nav-item active">
-                    <Link class="nav-link" to={{pathname:'/home'}}>
+                    <Link class="nav-link" to={{ pathname: "/home" }}>
                       Home{" "}
                     </Link>
                   </li>
@@ -34,7 +37,7 @@ const Nav = () => {
                   </li>
 
                   <li className="nav-item">
-                    <Link className="nav-link" to={{pathname:'/cart'}}>
+                    <Link className="nav-link" to={{ pathname: "/cart" }}>
                       <i
                         className="fa fa-shopping-cart"
                         style={{ fontSize: 24 }}
@@ -50,9 +53,12 @@ const Nav = () => {
         <header className={styles.headerChange}>
           <div className={`container`}>
             <nav class="navbar navbar-expand-lg navbar-light">
-              <a class={`navbar-brand ${styles.logo}`}>
+              <Link
+                to={{ pathname: "/home" }}
+                class={`navbar-brand ${styles.logo}`}
+              >
                 <img src={logo} alt="none"></img>
-              </a>
+              </Link>
 
               <div
                 class="collapse navbar-collapse justify-content-end"
@@ -60,7 +66,7 @@ const Nav = () => {
               >
                 <ul class={`navbar-nav ml-auto ${styles.Navbar}`}>
                   <li class="nav-item active">
-                    <Link class="nav-link" to={{pathname:'/home'}}>
+                    <Link class="nav-link" to={{ pathname: "/home" }}>
                       Home{" "}
                     </Link>
                   </li>
@@ -71,7 +77,7 @@ const Nav = () => {
                   </li>
 
                   <li className="nav-item">
-                    <Link className="nav-link" to={{pathname:'/cart'}}>
+                    <Link className="nav-link" to={{ pathname: "/cart" }}>
                       <i
                         className="fa fa-shopping-cart"
                         style={{ fontSize: 24 }}
