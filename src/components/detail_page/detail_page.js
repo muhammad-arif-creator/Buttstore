@@ -11,11 +11,14 @@ const DetailPage = () => {
   const productDetails = useSelector(
     (state) => state.ProductsDetails.productDetails,
   )
+  const loading= useSelector(
+    (state)=>state.ProductsDetails.loading
+  )
   useEffect(() => {
     dispatch(
       allActions.fetchProductDetailsAction.fetchProductDetails(params.id),
     )
-  }, [dispatch])
+  }, [dispatch,params.id])
   let quantity=0;
   const handleAddToCart=()=>{
     let payload={product:productDetails, qty:quantity};
@@ -26,8 +29,10 @@ const DetailPage = () => {
     quantity=e.target.value;
   }
 
+  let disabled=false;
+
   let prodDetail = null
-  if (Object.entries(productDetails).length === 0) {
+  if (loading) {
     prodDetail = <Spinner></Spinner>
   } else {
     prodDetail = (
@@ -54,7 +59,7 @@ const DetailPage = () => {
                 <input className="form-control" type="number" onChange={(e)=>{getQuantity(e)}} />
               </div>
               <div className={styles.buttons}>
-                <button className={styles.FirstBtn} onClick={handleAddToCart}>ADD TO CART</button>
+                {disabled?(<button className={styles.FirstBtn} onClick={handleAddToCart} disabled>ADD TO CART</button>):(<button className={styles.FirstBtn} onClick={handleAddToCart} >ADD TO CART</button>)}
                 <button className={styles.SecondBtn}>BUY IT NOW</button>
               </div>
             </div>

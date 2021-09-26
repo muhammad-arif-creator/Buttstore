@@ -14,6 +14,13 @@ const fetchProducts = (category) => async (dispatch) => {
   }
 };
 
+const productAdded=(payload)=>{
+  return {
+      type: "PRODUCT_ADDED",
+      payload:payload
+  }
+}
+
 export default {
   fetchProducts,
 };
