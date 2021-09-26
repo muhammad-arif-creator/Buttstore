@@ -22,7 +22,7 @@ const ProductListing = () => {
           since the 1500s,
         </p>
       </div>
-      <Product category={params.category} />
+      <Product category={params.category} showall={true} />
     </div>
   );
 };
