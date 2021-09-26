@@ -33,7 +33,7 @@ const Categories = () => {
               </Link>
             </span>
           </h3>
-          <Product category={category} />
+          <Product category={category} showall={false} />
         </section>
       );
     });

@@ -31,6 +31,7 @@ function App(props) {
             <Route exact path="/cart" component={Cart}></Route>
             <Route exact path="/" component={loginPage}></Route>
             <Route exact path="/customer-cart" component={CustomerCart}></Route>
+            <Route path="*" render={() => {<div><h1>Error Code: 404 </h1><h2>Page Not Found</h2></div>}}></Route>
           </Switch>
         </Hoc>
       </Router>

@@ -1,13 +1,11 @@
 .Detail_page {
-  /* width: 70%;
-    margin: 0 auto; */
   text-align: left;
   background: #fff;
 }
-.container {
+.Detail_page .container {
   max-width: 80%;
   margin: 0 auto;
-  padding: 50px 0px;
+  padding: 70px 0px;
 }
 .Detail_page_images {
   display: flex;
@@ -16,10 +14,7 @@
   justify-content: center;
   align-items: center;
 }
-/* .Detail_image {
-  max-width: 350px;
-  margin-left: auto;
-} */
+
 img {
   width: 100%;
 }
@@ -59,8 +54,6 @@ form {
 input {
   width: 28% !important;
   height: 44px;
-  /* margin-top: 30px;
-    margin-bottom: 50px; */
 }
 button {
   display: block;
@@ -76,26 +69,27 @@ button:hover {
   transition: all ease-in-out 0.5s;
   border: unset;
   border-radius: unset;
-
 }
 .buttons {
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
 }
 .FirstBtn {
   max-width: 30%;
+  border-radius: 0px;
   width: 100%;
   border: 1px solid #ff590f;
 }
 
 .SecondBtn {
+  border-radius: 0px;
   background-color: #fff;
   margin-left: 30px;
   max-width: 30%;
   width: 100%;
   color: #000;
   border: 1px solid black;
-
 }
 .SecondBtn:hover {
   background: #000;
@@ -104,6 +98,6 @@ button:hover {
   border: unset;
   border-radius: unset;
 }
-.Detail_image img{
+.Detail_image img {
   max-width: 400px;
 }

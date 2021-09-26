@@ -3,6 +3,7 @@ import logo from "./logo.png";
 import styles from "./Nav.module.css";
 import "font-awesome/css/font-awesome.min.css";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const location = useLocation();
@@ -12,9 +13,12 @@ const Nav = () => {
         <header>
           <div className={`container`}>
             <nav class="navbar navbar-expand-lg navbar-light">
-              <a class={`navbar-brand ${styles.logo}`}>
+              <Link
+                to={{ pathname: "/home" }}
+                class={`navbar-brand ${styles.logo}`}
+              >
                 <img src={logo} alt="none"></img>
-              </a>
+              </Link>
 
               <div
                 class="collapse navbar-collapse justify-content-end"
@@ -22,9 +26,9 @@ const Nav = () => {
               >
                 <ul class={`navbar-nav ml-auto ${styles.Navbar}`}>
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">
+                    <Link class="nav-link" to={{ pathname: "/home" }}>
                       Home{" "}
-                    </a>
+                    </Link>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">
@@ -33,12 +37,12 @@ const Nav = () => {
                   </li>
 
                   <li className="nav-item">
-                    <a className="nav-link">
+                    <Link className="nav-link" to={{ pathname: "/cart" }}>
                       <i
                         className="fa fa-shopping-cart"
                         style={{ fontSize: 24 }}
                       ></i>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -49,9 +53,12 @@ const Nav = () => {
         <header className={styles.headerChange}>
           <div className={`container`}>
             <nav class="navbar navbar-expand-lg navbar-light">
-              <a class={`navbar-brand ${styles.logo}`}>
+              <Link
+                to={{ pathname: "/home" }}
+                class={`navbar-brand ${styles.logo}`}
+              >
                 <img src={logo} alt="none"></img>
-              </a>
+              </Link>
 
               <div
                 class="collapse navbar-collapse justify-content-end"
@@ -59,9 +66,9 @@ const Nav = () => {
               >
                 <ul class={`navbar-nav ml-auto ${styles.Navbar}`}>
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">
+                    <Link class="nav-link" to={{ pathname: "/home" }}>
                       Home{" "}
-                    </a>
+                    </Link>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">
@@ -70,12 +77,12 @@ const Nav = () => {
                   </li>
 
                   <li className="nav-item">
-                    <a className="nav-link">
+                    <Link className="nav-link" to={{ pathname: "/cart" }}>
                       <i
                         className="fa fa-shopping-cart"
                         style={{ fontSize: 24 }}
                       ></i>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
