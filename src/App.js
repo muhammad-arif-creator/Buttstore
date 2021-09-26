@@ -7,7 +7,8 @@ import Hoc from "./components/HOC/Hoc";
 import loginPage from "./pages/login";
 import ProductDetailPage from "./pages/productdetail";
 import ProductListingPage from "./pages/productlisting";
-import CustomerCart from "./components/customerCart";
+import Checkout from "./components/Checkout";
+import Summary from "./components/Summary";
 
 function App(props) {
   if (window.location.pathname !== "/" && !localStorage.getItem("isLogin")) {
@@ -30,8 +31,17 @@ function App(props) {
             ></Route>
             <Route exact path="/cart" component={Cart}></Route>
             <Route exact path="/" component={loginPage}></Route>
-            <Route exact path="/customer-cart" component={CustomerCart}></Route>
-            <Route path="*" render={() => {<div><h1>Error Code: 404 </h1><h2>Page Not Found</h2></div>}}></Route>
+            <Route exact path="/checkout" component={Checkout}></Route>
+            <Route exact path="/summary" component={Summary}></Route>
+            <Route
+              path="*"
+              render={() => {
+                <div>
+                  <h1>Error Code: 404 </h1>
+                  <h2>Page Not Found</h2>
+                </div>;
+              }}
+            ></Route>
           </Switch>
         </Hoc>
       </Router>
