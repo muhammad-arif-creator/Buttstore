@@ -7,6 +7,7 @@ import Hoc from "./components/HOC/Hoc";
 import loginPage from "./pages/login";
 import ProductDetailPage from "./pages/productdetail";
 import ProductListingPage from "./pages/productlisting";
+import CustomerCart from "./components/customerCart";
 
 function App(props) {
   if (window.location.pathname !== "/" && !localStorage.getItem("isLogin")) {
@@ -29,6 +30,7 @@ function App(props) {
             ></Route>
             <Route exact path="/cart" component={Cart}></Route>
             <Route exact path="/" component={loginPage}></Route>
+            <Route exact path="/customer-cart" component={CustomerCart}></Route>
           </Switch>
         </Hoc>
       </Router>
