@@ -9,9 +9,18 @@ const Products = (state = initialState, action) => {
         ...state,
       };
     case "FETCH_POSTS_SUCCESS":
+      const temp=[]
+      for(let i=0;i<action.payload.length;i++)
+      {
+        const obj={
+          ...action.payload[i],
+          isAdded:false
+        }
+        temp.push(obj)
+      }
       return {
         ...state,
-        productItems: action.payload,
+        productItems: [...temp],
       };
     default:
       return state;

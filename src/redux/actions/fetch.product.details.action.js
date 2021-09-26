@@ -2,7 +2,11 @@ const fetchProductDetails = (id) => async (dispatch) => {
     dispatch({
       type: "FETCH_PRODUCT_DETAILS",
     });
+    
     try {
+      dispatch({
+        type: "SET_LOADING_TRUE",
+      });
       const response = await fetch(
         "https://fakestoreapi.com/products/"+id
       );

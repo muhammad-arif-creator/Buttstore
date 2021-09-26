@@ -10,7 +10,7 @@ const ProductListing = () => {
   let dispatch = useDispatch();
   useEffect(() => {
     dispatch(allActions.FetchProductAction.fetchProducts(params.category));
-  }, [dispatch]);
+  }, [dispatch,params.category]);
 
   return (
     <div className={`container ${styles.ProductListing}`}>
