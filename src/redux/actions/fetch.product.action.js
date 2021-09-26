@@ -3,6 +3,7 @@ const fetchProducts = (category) => async (dispatch) => {
   try {
     let url = "https://fakestoreapi.com/products";
     if (category) {
+      console.log("I am in if"+category);
       url = `${url}/category/${category}`;
     }
     const response = await fetch(url);

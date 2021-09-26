@@ -23,45 +23,83 @@ const Product = (props) => {
   }
 
   if (productItems.length >= 1) {
-    prod =
-      productItems &&
-      productItems.slice(0, 4).map((product, index) => {
-        return (
-          <div className="col-md-3 col-6 product-div" key={index}>
-            <div className={`card py-4 ${styles.product}`}>
-              <div className={styles.productImage}>
-                <img
-                  src={product.image}
-                  className={`img-fluid ${styles.cardImgTop}`}
-                  alt={product.image}
-                />
-              </div>
-              <div className={styles.viewDetail}>
-                <Link to={{ pathname: `/product-detail/${product.id}` }}>
-                  View Detail
-                </Link>
-              </div>
-              <div className="card-body text-center pb-0 px-0">
-                <h6 className={`text-uppercase mb-1 ${styles.cardTitle}`}>
-                  {product.title}
-                </h6>
-                <p className={styles.cardText}> {product.description}</p>
-                <div className={styles.cardBottom}>
-                  <span className={styles.productPrize}> ${product.price}</span>
-                  <button
-                    className={`btn ${styles.btnCart}`}
-                    onClick={() => {
-                      handleAddToCart(product);
-                    }}
-                  >
-                    ADD TO CART
-                  </button>
-                </div>
+    props.showall ?   prod =
+    productItems &&
+    productItems.map((product, index) => {
+      return (
+        <div className="col-md-3 col-6 product-div" key={index}>
+          <div className={`card py-4 ${styles.product}`}>
+            <div className={styles.productImage}>
+              <img
+                src={product.image}
+                className={`img-fluid ${styles.cardImgTop}`}
+                alt={product.image}
+              />
+            </div>
+            <div className={styles.viewDetail}>
+              <Link to={{ pathname: `/product-detail/${product.id}` }}>
+                View Detail
+              </Link>
+            </div>
+            <div className="card-body text-center pb-0 px-0">
+              <h6 className={`text-uppercase mb-1 ${styles.cardTitle}`}>
+                {product.title}
+              </h6>
+              <p className={styles.cardText}> {product.description}</p>
+              <div className={styles.cardBottom}>
+                <span className={styles.productPrize}> ${product.price}</span>
+                <button
+                  className={`btn ${styles.btnCart}`}
+                  onClick={() => {
+                    handleAddToCart(product);
+                  }}
+                >
+                  ADD TO CART
+                </button>
               </div>
             </div>
           </div>
-        );
-      });
+        </div>
+      );
+    }) :   prod =
+    productItems &&
+    productItems.slice(0, 4).map((product, index) => {
+      return (
+        <div className="col-md-3 col-6 product-div" key={index}>
+          <div className={`card py-4 ${styles.product}`}>
+            <div className={styles.productImage}>
+              <img
+                src={product.image}
+                className={`img-fluid ${styles.cardImgTop}`}
+                alt={product.image}
+              />
+            </div>
+            <div className={styles.viewDetail}>
+              <Link to={{ pathname: `/product-detail/${product.id}` }}>
+                View Detail
+              </Link>
+            </div>
+            <div className="card-body text-center pb-0 px-0">
+              <h6 className={`text-uppercase mb-1 ${styles.cardTitle}`}>
+                {product.title}
+              </h6>
+              <p className={styles.cardText}> {product.description}</p>
+              <div className={styles.cardBottom}>
+                <span className={styles.productPrize}> ${product.price}</span>
+                <button
+                  className={`btn ${styles.btnCart}`}
+                  onClick={() => {
+                    handleAddToCart(product);
+                  }}
+                >
+                  ADD TO CART
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    });
   }
 
   return <div className={`row ${styles.productRow}`}>{prod}</div>;
