@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Nav.module.css";
 import "font-awesome/css/font-awesome.min.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Nav = () => {
   const cartLength = useSelector((state) => state.Cart.cartItems.length);
-  const [headerbg, setHeaderBg] = useState("transparent");
+  const [headerBg, setHeaderBg] = useState("transparent");
 
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
@@ -21,12 +21,18 @@ const Nav = () => {
     }
   };
   const location = useLocation();
+  const history = useHistory();
+  const handleButtonClick = (e) => {
+    e.preventDefault();
+    localStorage.clear();
+    history.push("/");
+  };
   return (
     <>
       {location.pathname.includes("/home") ? (
-        <header style={{ backgroundColor: headerbg }}>
+        <header style={{ backgroundColor: headerBg }}>
           <div className={`container`}>
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav className="navbar navbar-expand-lg navbar-light">
               <Link
                 to={{ pathname: "/home" }}
                 className={`navbar-brand ${styles.logo}`}
@@ -35,19 +41,23 @@ const Nav = () => {
               </Link>
 
               <div
-                class="collapse navbar-collapse justify-content-end"
+                className="collapse navbar-collapse justify-content-end"
                 id="navbarText"
               >
-                <ul class={`navbar-nav ml-auto ${styles.Navbar}`}>
-                  <li class="nav-item active">
-                    <Link class="nav-link" to={{ pathname: "/home" }}>
+                <ul className={`navbar-nav ml-auto ${styles.Navbar}`}>
+                  <li className="nav-item active">
+                    <Link className="nav-link" to={{ pathname: "/home" }}>
                       Home{" "}
                     </Link>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link">About</a>
+                  <li className="nav-item">
+                    <Link className="nav-link">About</Link>
                   </li>
-
+                  <li className="nav-item">
+                    <Link className="nav-link" onClick={handleButtonClick}>
+                      Log Out
+                    </Link>
+                  </li>
                   <li className={`nav-item ${styles.navItems}`}>
                     <Link
                       className={`nav-link ${styles.navLink}`}
@@ -68,30 +78,34 @@ const Nav = () => {
       ) : (
         <header className={styles.headerChange}>
           <div className={`container`}>
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav className="navbar navbar-expand-lg navbar-light">
               <Link
                 to={{ pathname: "/home" }}
-                class={`navbar-brand ${styles.logo}`}
+                className={`navbar-brand ${styles.logo}`}
               >
                 ButtStore
               </Link>
 
               <div
-                class="collapse navbar-collapse justify-content-end"
+                className="collapse navbar-collapse justify-content-end"
                 id="navbarText"
               >
-                <ul class={`navbar-nav ml-auto ${styles.Navbar}`}>
+                <ul className={`navbar-nav ml-auto ${styles.Navbar}`}>
                   <li class="nav-item active">
-                    <Link class="nav-link" to={{ pathname: "/home" }}>
+                    <Link className="nav-link" to={{ pathname: "/home" }}>
                       Home{" "}
                     </Link>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
+                  <li className="nav-item">
+                    <Link className="nav-link" href="#">
                       About
-                    </a>
+                    </Link>
                   </li>
-
+                  <li className="nav-item">
+                    <Link className="nav-link" onClick={handleButtonClick}>
+                      Log Out
+                    </Link>
+                  </li>
                   <li className={`nav-item ${styles.navItems}`}>
                     <Link
                       className={`nav-link ${styles.navLink}`}
