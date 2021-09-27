@@ -1,6 +1,6 @@
 .cartWrapper {
   display: flex;
-  padding-top: 127px;
+  padding-top: 100px;
 }
 .cartLeft {
   width: 50%;
@@ -88,7 +88,7 @@ table tfoot > tr > th {
   position: absolute;
   right: -0.75em;
   top: -0.75em;
-  z-index: 3;
+  z-index: 2;
 }
 .continueButton {
   width: 150px;

@@ -1,11 +1,12 @@
 import React from "react";
-import DetailPage from "../components/detail_page/detail_page";
+import DetailPage from "../components/Detail_page";
+import Hoc from "../components/HOC/Hoc";
 
 const ProductDetailPage = () => {
   return (
-    <div>
+    <Hoc>
       <DetailPage />
-    </div>
+    </Hoc>
   );
 };
 

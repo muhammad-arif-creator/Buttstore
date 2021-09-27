@@ -8,6 +8,19 @@ const Products = (state = initialState, action) => {
       return {
         ...state,
       };
+      case "PRODUCT_ADDED":
+        let temp1=[...state.productItems]
+        for(let i=0; i<temp1.length;i++)
+        {
+          if(temp1[i].id===action.payload.id)
+          {
+            temp1[i].isAdded=true;
+          }
+        }
+        return {
+          ...state,
+          productItems:temp1
+        };
     case "FETCH_POSTS_SUCCESS":
       const temp=[]
       for(let i=0;i<action.payload.length;i++)

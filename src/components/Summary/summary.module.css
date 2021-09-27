@@ -1,5 +1,6 @@
 .cartWrapper {
   display: flex;
+  padding-top: 100px;
 }
 .cartLeft {
   width: 50%;
@@ -87,7 +88,7 @@ table tfoot > tr > th {
   position: absolute;
   right: -0.75em;
   top: -0.75em;
-  z-index: 3;
+  z-index: 2;
 }
 .continueButton {
   width: 150px;
@@ -278,12 +279,13 @@ table tfoot > tr > th {
 .reviewRow {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 15px;
   border-bottom: 1px solid #e6e6e6;
   flex-wrap: wrap;
 }
 .shipingRow * {
   width: 100%;
+  margin-bottom: 5px;
 }
 .shipingRow .reviewTitle {
   width: auto;

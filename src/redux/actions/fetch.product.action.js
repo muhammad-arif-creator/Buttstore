@@ -3,7 +3,7 @@ const fetchProducts = (category) => async (dispatch) => {
   try {
     let url = "https://fakestoreapi.com/products";
     if (category) {
-      console.log("I am in if"+category);
+      console.log("I am in if" + category);
       url = `${url}/category/${category}`;
     }
     const response = await fetch(url);
@@ -14,13 +14,15 @@ const fetchProducts = (category) => async (dispatch) => {
   }
 };
 
-const productAdded=(payload)=>{
+const productAdded = (payload) => {
   return {
-      type: "PRODUCT_ADDED",
-      payload:payload
-  }
-}
-
-export default {
-  fetchProducts,
+    type: "PRODUCT_ADDED",
+    payload: payload,
+  };
 };
+
+const fetchProductAction = {
+  fetchProducts,
+  productAdded,
+};
+export default fetchProductAction;

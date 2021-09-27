@@ -1,12 +1,12 @@
 import React from "react";
-import Home from "../components/Home";
+import Cart from "../components/Cart";
 import Hoc from "../components/HOC/Hoc";
 
-const HomePage = () => {
+const CartPage = () => {
   return (
     <Hoc>
-      <Home />
+      <Cart />
     </Hoc>
   );
 };
-export default HomePage;
+export default CartPage;

@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import Product from "../products/product";
+import Product from "../Products";
 import styles from "./categories.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import allActions from "../../redux/actions";
-import Spinner from "../Spinner/Spinner";
+import Spinner from "../Spinner";
 import { Link } from "react-router-dom";
 
 const Categories = () => {
@@ -29,7 +29,7 @@ const Categories = () => {
             {category}
             <span>
               <Link to={{ pathname: `products/${category}` }}>
-                view all products <i class="fa fa-arrow-right"></i>
+                view all products <i className="fa fa-arrow-right"></i>
               </Link>
             </span>
           </h3>
