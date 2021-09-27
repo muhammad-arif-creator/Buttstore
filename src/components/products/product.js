@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./products.module.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -6,7 +6,6 @@ import Spinner from "../Spinner/Spinner";
 import allActions from "../../redux/actions";
 
 const Product = (props) => {
-  const[isAdded, setIsAdded]=useState(false);
   const dispatch = useDispatch();
   const productItems = useSelector((state) =>
     state.Products.productItems.filter((p) => p.category === props.category)
@@ -16,7 +15,7 @@ const Product = (props) => {
     let payload = { product: product, qty: 1 };
     dispatch(allActions.CartAction.addToCart(payload));
   };
-  const disabled="disabled";
+  const isAdded=false;
   let prod = null;
   if (productItems.length === 0) {
     prod = <Spinner></Spinner>;

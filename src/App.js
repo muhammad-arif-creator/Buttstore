@@ -2,13 +2,12 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/home";
 import { withRouter } from "react-router-dom";
-import Cart from "./components/cart/Cart";
-import Hoc from "./components/HOC/Hoc";
+import CartPage from "./pages/CartPage";
 import loginPage from "./pages/login";
 import ProductDetailPage from "./pages/productdetail";
 import ProductListingPage from "./pages/productlisting";
-import Checkout from "./components/Checkout";
-import Summary from "./components/Summary";
+import CheckOutPage from "./pages/CheckOutPage";
+import SummaryPage from "./pages/SummaryPage";
 
 function App(props) {
   if (window.location.pathname !== "/" && !localStorage.getItem("isLogin")) {
@@ -17,7 +16,6 @@ function App(props) {
   return (
     <div className="App">
       <Router>
-        <Hoc>
           <Switch>
             <Route exact path="/home" component={HomePage}></Route>
             <Route
@@ -29,21 +27,20 @@ function App(props) {
               path="/product-detail/:id"
               component={ProductDetailPage}
             ></Route>
-            <Route exact path="/cart" component={Cart}></Route>
+            <Route exact path="/cart" component={CartPage}></Route>
             <Route exact path="/" component={loginPage}></Route>
-            <Route exact path="/checkout" component={Checkout}></Route>
-            <Route exact path="/summary" component={Summary}></Route>
+            <Route exact path="/checkout" component={CheckOutPage}></Route>
+            <Route exact path="/summary" component={SummaryPage}></Route>
             <Route
               path="*"
               render={() => {
                 <div>
                   <h1>Error Code: 404 </h1>
                   <h2>Page Not Found</h2>
-                </div>;
+                </div>
               }}
             ></Route>
           </Switch>
-        </Hoc>
       </Router>
     </div>
   );
