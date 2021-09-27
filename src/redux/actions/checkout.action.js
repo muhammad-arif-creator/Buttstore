@@ -5,6 +5,7 @@ const getUser = (userObj) => {
   };
 };
 
-export default {
+const chekoutAction = {
   getUser,
 };
+export default chekoutAction;

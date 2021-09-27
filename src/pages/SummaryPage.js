@@ -4,9 +4,9 @@ import Hoc from "../components/HOC/Hoc";
 
 const SummaryPage = () => {
   return (
-      <Hoc>
-          <Summary/>
-      </Hoc>
+    <Hoc>
+      <Summary />
+    </Hoc>
   );
 };
 export default SummaryPage;

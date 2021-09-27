@@ -29,7 +29,7 @@ const Categories = () => {
             {category}
             <span>
               <Link to={{ pathname: `products/${category}` }}>
-                view all products <i class="fa fa-arrow-right"></i>
+                view all products <i className="fa fa-arrow-right"></i>
               </Link>
             </span>
           </h3>

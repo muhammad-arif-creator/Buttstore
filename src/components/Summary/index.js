@@ -1,8 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "./summary.module.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import MyVerticallyCenteredModal from "../Modal/Modal";
+import allActions from "../../redux/actions";
+
 const Summary = () => {
+  const dispatch = useDispatch();
+  const handleConfirm = () => {
+    dispatch(allActions.CartAction.emptyCart());
+    setModalShow(true);
+  };
   const [modalShow, setModalShow] = useState(false);
   const cart = useSelector((state) => state.Cart);
   const userSummary = useSelector((state) => state.User.user);
@@ -57,7 +64,9 @@ const Summary = () => {
               </div>
             </div>
             <div className={styles.shippingBtn}>
-              <button type="button" variant="primary" onClick={() => setModalShow(true)}>Confirm order</button>
+              <button type="button" variant="primary" onClick={handleConfirm}>
+                Confirm order
+              </button>
             </div>
           </div>
 
@@ -72,27 +81,23 @@ const Summary = () => {
                           <div className={styles.thumbnail}>
                             <img
                               alt="Apricot Midi Skirt"
-                              class="product-thumbnail__image"
+                              className="product-thumbnail__image"
                               src={cartItem.image}
                             />
                           </div>
                           <span
-                            class="product-thumbnail__quantity"
+                            className="product-thumbnail__quantity"
                             aria-hidden="true"
                           >
                             {cartItem.quantity}
                           </span>
                         </div>
                       </th>
-                      <th className={`pl-4 ${styles.second}`} scope="row">
+                      <th className={`px-4 ${styles.second}`} scope="row">
                         <span>{cartItem.title}</span>
                         <span className={styles.small}>Small</span>
                       </th>
-                      <td
-                        scope="col"
-                        colSpan="2"
-                        className={`${styles.subTotal}`}
-                      >
+                      <td colSpan="2" className={`${styles.subTotal}`}>
                         ${cartItem.price}
                       </td>
                     </tr>
@@ -102,17 +107,13 @@ const Summary = () => {
               <tbody>
                 <tr>
                   <td>Subtotal</td>
-                  <td scope="col" colSpan="2" className={`${styles.subTotal}`}>
+                  <td colSpan="2" className={`${styles.subTotal}`}>
                     ${cart.price}
                   </td>
                 </tr>
                 <tr>
                   <td className="pt-0">Shipping</td>
-                  <td
-                    scope="col"
-                    colSpan="2"
-                    className={`pt-0 ${styles.subTotal}`}
-                  >
+                  <td colSpan="2" className={`pt-0 ${styles.subTotal}`}>
                     free
                   </td>
                 </tr>
@@ -130,8 +131,10 @@ const Summary = () => {
             </table>
           </div>
         </div>
-        <MyVerticallyCenteredModal  show={modalShow}
-        onHide={() => setModalShow(false)}></MyVerticallyCenteredModal>
+        <MyVerticallyCenteredModal
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        ></MyVerticallyCenteredModal>
       </div>
 
       {/* Modal */}
