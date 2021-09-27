@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./summary.module.css";
 import { useSelector } from "react-redux";
+import MyVerticallyCenteredModal from "../Modal/Modal";
 const Summary = () => {
+  const [modalShow, setModalShow] = useState(false);
   const cart = useSelector((state) => state.Cart);
   const userSummary = useSelector((state) => state.User.user);
   return (
@@ -55,7 +57,7 @@ const Summary = () => {
               </div>
             </div>
             <div className={styles.shippingBtn}>
-              <button type="button">Confirm order</button>
+              <button type="button" variant="primary" onClick={() => setModalShow(true)}>Confirm order</button>
             </div>
           </div>
 
@@ -128,6 +130,8 @@ const Summary = () => {
             </table>
           </div>
         </div>
+        <MyVerticallyCenteredModal  show={modalShow}
+        onHide={() => setModalShow(false)}></MyVerticallyCenteredModal>
       </div>
 
       {/* Modal */}
