@@ -10,6 +10,7 @@ const Checkout = () => {
     firstName: "",
     lastName: "",
     company: "",
+    address: "",
     aprtment: "",
     city: "",
     phone: "",
@@ -67,7 +68,12 @@ const Checkout = () => {
                     type="text"
                     placeholder="Company"
                   ></input>
-                  <input type="text" placeholder="Address"></input>
+                  <input
+                    type="text"
+                    name="address"
+                    placeholder="Address"
+                    onChange={handelChange}
+                  ></input>
                   <input
                     onChange={handelChange}
                     type="text"
@@ -112,7 +118,7 @@ const Checkout = () => {
                             />
                           </div>
                           <span
-                            class="product-thumbnail__quantity"
+                            className="product-thumbnail__quantity"
                             aria-hidden="true"
                           >
                             {cartItem.quantity}
