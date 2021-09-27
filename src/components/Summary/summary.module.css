@@ -1,5 +1,6 @@
 .cartWrapper {
   display: flex;
+  padding-top: 100px;
 }
 .cartLeft {
   width: 50%;
