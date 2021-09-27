@@ -1,11 +1,11 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import HomePage from "./pages/home";
+import HomePage from "./pages/Home";
 import { withRouter } from "react-router-dom";
 import CartPage from "./pages/CartPage";
-import loginPage from "./pages/login";
-import ProductDetailPage from "./pages/productdetail";
-import ProductListingPage from "./pages/productlisting";
+import loginPage from "./pages/Login";
+import ProductDetailPage from "./pages/Productdetail";
+import ProductListingPage from "./pages/Productlisting";
 import CheckOutPage from "./pages/CheckOutPage";
 import SummaryPage from "./pages/SummaryPage";
 

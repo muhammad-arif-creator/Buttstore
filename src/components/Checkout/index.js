@@ -44,6 +44,7 @@ const Checkout = () => {
                     name="email"
                     type="text"
                     placeholder="Email or mobile phone  number"
+                    value={user.email}
                   ></input>
 
                   <h3>Shipping Address</h3>
@@ -54,12 +55,14 @@ const Checkout = () => {
                       name="firstName"
                       type="text"
                       placeholder="First Name"
+                      value={user.firstName}
                     ></input>
                     <input
                       onChange={handelChange}
                       name="lastName"
                       type="text"
                       placeholder="Last Name"
+                      value={user.lastName}
                     ></input>
                   </div>
                   <input
@@ -67,30 +70,35 @@ const Checkout = () => {
                     name="company"
                     type="text"
                     placeholder="Company"
+                    value={user.company}
                   ></input>
                   <input
                     type="text"
                     name="address"
                     placeholder="Address"
                     onChange={handelChange}
+                    value={user.address}
                   ></input>
                   <input
                     onChange={handelChange}
                     type="text"
                     name="aprtment"
                     placeholder="Apartment, suite, etc"
+                    value={user.aprtment}
                   ></input>
                   <input
                     onChange={handelChange}
                     name="city"
                     type="text"
                     placeholder="City"
+                    value={user.city}
                   ></input>
                   <input
                     onChange={handelChange}
                     name="phone"
                     type="text"
                     placeholder="Phone"
+                    value={user.phone}
                   ></input>
 
                   <div className={styles.shippingBtn}>
@@ -125,15 +133,11 @@ const Checkout = () => {
                           </span>
                         </div>
                       </th>
-                      <th className={`pl-4 ${styles.second}`} scope="row">
+                      <th className={`px-4 ${styles.second}`} scope="row">
                         <span>{cartItem.title}</span>
                         <span className={styles.small}>Small</span>
                       </th>
-                      <td
-                        scope="col"
-                        colSpan="2"
-                        className={`${styles.subTotal}`}
-                      >
+                      <td colSpan="2" className={`${styles.subTotal}`}>
                         ${cartItem.price}
                       </td>
                     </tr>
@@ -143,17 +147,13 @@ const Checkout = () => {
               <tbody>
                 <tr>
                   <td>Subtotal</td>
-                  <td scope="col" colSpan="2" className={`${styles.subTotal}`}>
+                  <td colSpan="2" className={`${styles.subTotal}`}>
                     ${cart.price}
                   </td>
                 </tr>
                 <tr>
                   <td className="pt-0">Shipping</td>
-                  <td
-                    scope="col"
-                    colSpan="2"
-                    className={`pt-0 ${styles.subTotal}`}
-                  >
+                  <td colSpan="2" className={`pt-0 ${styles.subTotal}`}>
                     calculated in next step
                   </td>
                 </tr>

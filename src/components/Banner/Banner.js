@@ -27,8 +27,8 @@ const Banner = () => {
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s
                 </p>
-                <button href="#" class="primary-btn">
-                  Shop now <span class="arrow_right"></span>
+                <button className="primary-btn">
+                  Shop now <span className="arrow_right"></span>
                 </button>
               </div>
             </div>
@@ -47,8 +47,8 @@ const Banner = () => {
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s
                 </p>
-                <button href="#" class="primary-btn">
-                  Shop now <span class="arrow_right"></span>
+                <button class="primary-btn">
+                  Shop now <span className="arrow_right"></span>
                 </button>
               </div>
             </div>

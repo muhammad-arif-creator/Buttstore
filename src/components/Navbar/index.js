@@ -51,12 +51,14 @@ const Nav = () => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link">About</Link>
+                    <Link to={{ pathname: "/home" }} className="nav-link">
+                      About
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" onClick={handleButtonClick}>
+                    <button className="nav-link" onClick={handleButtonClick}>
                       Log Out
-                    </Link>
+                    </button>
                   </li>
                   <li className={`nav-item ${styles.navItems}`}>
                     <Link
@@ -67,7 +69,9 @@ const Nav = () => {
                         className="fa fa-shopping-cart"
                         style={{ fontSize: 24 }}
                       ></i>
-                      <span className={styles.cartCounter}>{cartLength}</span>
+                      {cartLength ? (
+                        <span className={styles.cartCounter}>{cartLength}</span>
+                      ) : null}
                     </Link>
                   </li>
                 </ul>
@@ -91,20 +95,20 @@ const Nav = () => {
                 id="navbarText"
               >
                 <ul className={`navbar-nav ml-auto ${styles.Navbar}`}>
-                  <li class="nav-item active">
+                  <li className="nav-item active">
                     <Link className="nav-link" to={{ pathname: "/home" }}>
                       Home{" "}
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" href="#">
+                    <Link className="nav-link" to={{ pathname: "/home" }}>
                       About
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" onClick={handleButtonClick}>
+                    <button className="nav-link" onClick={handleButtonClick}>
                       Log Out
-                    </Link>
+                    </button>
                   </li>
                   <li className={`nav-item ${styles.navItems}`}>
                     <Link
@@ -115,7 +119,9 @@ const Nav = () => {
                         className="fa fa-shopping-cart"
                         style={{ fontSize: 24 }}
                       ></i>
-                      <span className={styles.cartCounter}>{cartLength}</span>
+                      {cartLength ? (
+                        <span className={styles.cartCounter}>{cartLength}</span>
+                      ) : null}
                     </Link>
                   </li>
                 </ul>
