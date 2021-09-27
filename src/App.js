@@ -16,31 +16,31 @@ function App(props) {
   return (
     <div className="App">
       <Router>
-          <Switch>
-            <Route exact path="/home" component={HomePage}></Route>
-            <Route
-              path="/products/:category"
-              component={ProductListingPage}
-            ></Route>
-            <Route
-              exact
-              path="/product-detail/:id"
-              component={ProductDetailPage}
-            ></Route>
-            <Route exact path="/cart" component={CartPage}></Route>
-            <Route exact path="/" component={loginPage}></Route>
-            <Route exact path="/checkout" component={CheckOutPage}></Route>
-            <Route exact path="/summary" component={SummaryPage}></Route>
-            <Route
-              path="*"
-              render={() => {
-                <div>
-                  <h1>Error Code: 404 </h1>
-                  <h2>Page Not Found</h2>
-                </div>
-              }}
-            ></Route>
-          </Switch>
+        <Switch>
+          <Route exact path="/home" component={HomePage}></Route>
+          <Route
+            path="/products/:category"
+            component={ProductListingPage}
+          ></Route>
+          <Route
+            exact
+            path="/product-detail/:id"
+            component={ProductDetailPage}
+          ></Route>
+          <Route exact path="/cart" component={CartPage}></Route>
+          <Route exact path="/" component={loginPage}></Route>
+          <Route exact path="/checkout" component={CheckOutPage}></Route>
+          <Route exact path="/summary" component={SummaryPage}></Route>
+          <Route
+            path="*"
+            render={() => {
+              <div>
+                <h1>Error Code: 404 </h1>
+                <h2>Page Not Found</h2>
+              </div>;
+            }}
+          ></Route>
+        </Switch>
       </Router>
     </div>
   );
