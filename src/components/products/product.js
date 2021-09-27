@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./products.module.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -6,7 +6,6 @@ import Spinner from "../Spinner/Spinner";
 import allActions from "../../redux/actions";
 
 const Product = (props) => {
-  const[isAdded, setIsAdded]=useState(false);
   const dispatch = useDispatch();
   const productItems = useSelector((state) =>
     state.Products.productItems.filter((p) => p.category === props.category)
@@ -15,8 +14,9 @@ const Product = (props) => {
   const handleAddToCart = (product) => {
     let payload = { product: product, qty: 1 };
     dispatch(allActions.CartAction.addToCart(payload));
+    dispatch(allActions.FetchProductAction.productAdded(product));
   };
-  const disabled="disabled";
+  ;
   let prod = null;
   if (productItems.length === 0) {
     prod = <Spinner></Spinner>;
@@ -86,7 +86,7 @@ const Product = (props) => {
               <p className={styles.cardText}> {product.description}</p>
               <div className={styles.cardBottom}>
                 <span className={styles.productPrize}> ${product.price}</span>
-                {isAdded?(<button className={`btn ${styles.btnCart}`} onClick={() => {handleAddToCart(product)}} disabled> ADD TO CART </button>)
+                {product.isAdded?(<button className={`btn ${styles.btnCart}`} onClick={() => {handleAddToCart(product)}} disabled> ADDED </button>)
                 :(<button className={`btn ${styles.btnCart}`} onClick={() => {handleAddToCart(product)}}> ADD TO CART </button>)}
               </div>
             </div>
