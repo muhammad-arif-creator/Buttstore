@@ -9,6 +9,7 @@
 }
 .itemTwo {
   background: url(../../assets/images/banner2.jpg) no-repeat;
+  background-size: cover;
 }
 .itemOne:before {
   position: absolute;
