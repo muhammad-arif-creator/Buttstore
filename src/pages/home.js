@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "../components/home/home";
+import Home from "../components/Home";
 import Hoc from "../components/HOC/Hoc";
 
 const HomePage = () => {

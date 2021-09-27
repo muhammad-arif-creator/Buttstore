@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Product from "../products/product";
+import Product from "../Products";
 import styles from "./ProductListing.module.css";
 import { useParams } from "react-router";
 import { useDispatch } from "react-redux";
@@ -10,7 +10,7 @@ const ProductListing = () => {
   let dispatch = useDispatch();
   useEffect(() => {
     dispatch(allActions.FetchProductAction.fetchProducts(params.category));
-  }, [dispatch,params.category]);
+  }, [dispatch, params.category]);
 
   return (
     <div className={`container ${styles.ProductListing}`}>

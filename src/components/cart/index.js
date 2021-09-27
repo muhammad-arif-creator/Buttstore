@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../cart/cart.module.css";
+import styles from "./cart.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import allActions from "../../redux/actions";
 import { Link } from "react-router-dom";
