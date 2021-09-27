@@ -16,7 +16,7 @@ p {
   padding: 0px 55px;
   box-sizing: border-box;
   color: #201f1f;
-  padding: 40px 0px;
+  padding: 200px 0px 80px;
 }
 .tableHeader {
   margin-bottom: 1.7rem;
@@ -28,6 +28,7 @@ p {
 
 .cartHeader a {
   color: #ff590f;
+  display: inline-block;
   border-bottom: 1px solid #ff590f;
   padding-bottom: 1px;
   text-decoration: none;
@@ -174,4 +175,9 @@ table td a {
 .itemsCount span {
   border: 1px solid black;
   padding: 6px 15px;
+}
+
+.continueshoping {
+  padding: 0px;
+  border: 0px;
 }

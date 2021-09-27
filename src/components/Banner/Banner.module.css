@@ -17,7 +17,7 @@
   width: 100%;
   z-index: 1;
   height: 100%;
-  opacity: 0.8;
+  opacity: 0.5;
   content: "";
   background-color: #000;
 }
