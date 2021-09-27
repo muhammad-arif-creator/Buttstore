@@ -23,4 +23,5 @@ const productAdded=(payload)=>{
 
 export default {
   fetchProducts,
+  productAdded
 };
