@@ -31,3 +31,7 @@ a {
 a:hover {
   color: inherit;
 }
+
+button:focus {
+  box-shadow: none;
+}
