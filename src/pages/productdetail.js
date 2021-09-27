@@ -1,5 +1,5 @@
 import React from "react";
-import DetailPage from "../components/Detail_page";
+import DetailPage from "../components/detail_page";
 import Hoc from "../components/HOC/Hoc";
 
 const ProductDetailPage = () => {

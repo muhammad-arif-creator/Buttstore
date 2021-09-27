@@ -1,5 +1,5 @@
 import React from "react";
-import Cart from "../components/Cart";
+import Cart from "../components/cart";
 import Hoc from "../components/HOC/Hoc";
 
 const CartPage = () => {
