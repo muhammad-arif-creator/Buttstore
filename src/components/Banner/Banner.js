@@ -9,6 +9,7 @@ const Banner = () => {
       items={1}
       className="owl-theme"
       loop
+      autoplay
       nav
       margin={3}
       dots={false}
@@ -20,10 +21,11 @@ const Banner = () => {
             <div className="col-12">
               <div className={styles.bannerText}>
                 <h6>Summer Collection</h6>
-                <h2>Fall - Winter Collections 2030</h2>
+                <h2>MEN'S WEAR Collections 2021</h2>
                 <p>
-                  A specialist label creating luxury essentials. Ethically
-                  crafted with an unwavering commitment to exceptional quality.
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s
                 </p>
                 <button href="#" class="primary-btn">
                   Shop now <span class="arrow_right"></span>
@@ -39,10 +41,11 @@ const Banner = () => {
             <div className="col-12">
               <div className={styles.bannerText}>
                 <h6>Winter Collection</h6>
-                <h2>Fall - Winter Collections 2030</h2>
+                <h2>women's wear Collections 2030</h2>
                 <p>
-                  A specialist label creating luxury essentials. Ethically
-                  crafted with an unwavering commitment to exceptional quality.
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s
                 </p>
                 <button href="#" class="primary-btn">
                   Shop now <span class="arrow_right"></span>
