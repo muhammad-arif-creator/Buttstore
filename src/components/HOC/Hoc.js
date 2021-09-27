@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../Navbar";
-import Footer from "../Footer";
+import Footer from "../footer";
 import Aux from "./Hoc-Aux";
 
 const Hoc = (props) => {
