@@ -51,8 +51,8 @@ const DetailPage = () => {
             </h5>
             <span>Tax included for Pakistan</span>
             <div>
-              <div className="form-group">
-                <label>Quantity</label>
+              <div className="form-group mt-3 mb-4">
+                <label className="mb-2">Quantity</label>
                 <input
                   className="form-control"
                   type="number"

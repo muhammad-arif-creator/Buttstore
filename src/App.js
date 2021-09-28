@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 import CartPage from "./pages/CartPage";
 import loginPage from "./pages/login";
 import ProductDetailPage from "./pages/productdetail";
-import ProductListingPage from "./pages/productlisting";
+import ProductListingPage from "./pages/Productlisting";
 import CheckOutPage from "./pages/CheckOutPage";
 import SummaryPage from "./pages/SummaryPage";
 

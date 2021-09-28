@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Product from "../products";
+import Product from "../Products";
 import styles from "./ProductListing.module.css";
 import { useParams } from "react-router";
 import { useDispatch } from "react-redux";
